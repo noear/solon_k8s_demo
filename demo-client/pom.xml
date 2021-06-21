@@ -6,7 +6,7 @@
 
     <groupId>org.noear.demo.k8s</groupId>
     <artifactId>demo-client</artifactId>
-    <version>v1</version>
+    <version>v2</version>
     <packaging>jar</packaging>
 
     <parent>
@@ -90,7 +90,7 @@
                     <!--镜像的FROM，使用java官方镜像-->
                     <baseImage>adoptopenjdk/openjdk11</baseImage>
                     <!--该镜像的容器启动后，直接运行spring boot工程-->
-                    <cmd>["java", "-jar", "/${project.build.finalName}.jar", "--server.port=8080","--drift=1"]</cmd>
+                    <cmd>["java", "-jar", "/${project.build.finalName}.jar", "--server.port=8080","--drift=1","-debug=1"]</cmd>
                     <!--构建镜像的配置信息-->
                     <resources>
                         <resource>
