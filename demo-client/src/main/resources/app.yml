@@ -1,3 +1,9 @@
 solon.app:
   name: demo-client
   group: demo
+
+solon.cloud.local:
+  discovery:
+    service:
+      demo-api:
+        - "http://demo-api"
