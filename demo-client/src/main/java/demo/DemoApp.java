@@ -18,6 +18,7 @@ public class DemoApp {
         while (true) {
             try {
                 HttpUtils.http("http://localhost:" + Solon.cfg().serverPort() + "/").get();
+                System.out.println("预势成功");
                 break;
             } catch (Exception e) {
                 e.printStackTrace();
