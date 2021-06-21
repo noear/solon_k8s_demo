@@ -8,9 +8,11 @@ import org.noear.solon.cloud.tool.HttpUtils;
  */
 public class DemoApp {
     public static void main(String[] args) {
-        Solon.start(DemoApp.class, args).get("/",c->{
-            String rst = HttpUtils.http("http://demo-api/").get();
-            c.output(rst);
-        });
+        Solon.start(DemoApp.class, args)
+                .onError(e -> e.printStackTrace())
+                .get("/", c -> {
+                    String rst = HttpUtils.http("http://demo-api/").get();
+                    c.output(rst);
+                });
     }
 }
