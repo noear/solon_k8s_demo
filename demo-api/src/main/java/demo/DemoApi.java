@@ -7,6 +7,6 @@ import org.noear.solon.Solon;
  */
 public class DemoApi {
     public static void main(String[] args) {
-        Solon.start(DemoApi.class, args).get("/", c->c.output("hello world!"));
+        Solon.start(DemoApi.class, args).get("/", c -> c.output("hello world!"));
     }
 }
