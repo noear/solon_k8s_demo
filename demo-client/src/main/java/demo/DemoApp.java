@@ -1,7 +1,7 @@
 package demo;
 
 import org.noear.solon.Solon;
-import org.noear.solon.cloud.tool.HttpUtils;
+import org.noear.solon.cloud.utils.http.HttpUtils;
 
 /**
  * @author noear 2021/6/18 created
